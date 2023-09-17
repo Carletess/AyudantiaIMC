@@ -126,7 +126,7 @@ public class Main {
         System.out.println("La altura promedio es: " + formatearNumero(promedioAltura));
     }
 
-    private static double calcularPromedio(String[][] datosIMC, int fila) {
+    public static double calcularPromedio(String[][] datosIMC, int fila) {
         double promedio = 0;
         int valoresValidos = 0;
 
@@ -155,7 +155,7 @@ public class Main {
         return promedio;
     }
 
-    private static void mostrarCategoriaIMC(double imc) {
+    public static void mostrarCategoriaIMC(double imc) {
         if (imc < 18.5) {
             System.out.println("Categoría: Bajo Peso");
         } else if (imc >= 18.5 && imc <= 24.9) {
@@ -167,7 +167,7 @@ public class Main {
         }
     }
 
-    private static double calcularIMC(String pesoStr, String alturaStr) {
+    public static double calcularIMC(String pesoStr, String alturaStr) {
         if (pesoStr != null && alturaStr != null) {
             try {
                 double peso = Double.parseDouble(pesoStr);
@@ -212,7 +212,7 @@ public class Main {
         }
     }
 
-    private static void pedirDatosNuevamente(String[][] datosIMC, int indice) {
+    public static void pedirDatosNuevamente(String[][] datosIMC, int indice) {
         datosIMC[0][indice] = pedirNombre();
         datosIMC[1][indice] = String.valueOf(pedirPeso());
         datosIMC[2][indice] = String.valueOf(pedirAltura());
